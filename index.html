@@ -3,205 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team H8 | Official Website</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Team H8 | Official CS2 Esports Team from Belarus</title>
+    <meta name="description" content="Team H8 (Hate) - амбициозная киберспортивная организация из Минска. Профессиональная команда по Counter-Strike 2.">
+    <meta name="keywords" content="Team H8, CS2, Counter-Strike, esports, Belarus, Minsk, киберспорт">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teamh8.gg/">
+    <meta property="og:title" content="Team H8 | Official CS2 Esports Team">
+    <meta property="og:description" content="Новая эра белорусского Counter-Strike 2">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://teamh8.gg/">
+    <meta property="twitter:title" content="Team H8 | Official CS2 Esports Team">
+    <meta property="twitter:description" content="Новая эра белорусского Counter-Strike 2">
+    <meta property="twitter:image" content="img/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
-    <header>
+    <header id="header">
         <nav>
             <div class="logo">H8<span>HATE</span></div>
-            <ul>
-                <li><a href="#roster">Состав</a></li>
-                <li><a href="#documents">Документы</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+            
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#roster" data-translate="nav_roster">Состав</a></li>
+                <li><a href="#matches" data-translate="nav_matches">Матчи</a></li>
+                <li><a href="#achievements" data-translate="nav_achievements">Достижения</a></li>
+                <li><a href="#gallery" data-translate="nav_gallery">Галерея</a></li>
+                <li><a href="#documents" data-translate="nav_documents">Документы</a></li>
+                <li><a href="#contacts" data-translate="nav_contacts">Контакты</a></li>
             </ul>
-        </nav>
-    </header>
-
-       <header>
-        <nav>
-            <div class="logo">H8<span>HATE</span></div>
-            <ul>
-                <li><a href="#roster">Состав</a></li>
-                <li><a href="#documents">Документы</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <section class="hero">
-    <div class="video-background">
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="video/h8_edit.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-    </div>
-    
-    <div class="hero-content">
-        <h1>TEAM H8</h1>
-        <p>New Era of Belarusian Counter-Strike 2</p>
-        <a href="#roster" class="btn">Смотреть Ростер</a>
-    </div>
-</section>
+        <!-- Particles Background -->
+        <div id="particles-js"></div>
+        
+        <div class="video-background">
+            <video autoplay muted loop playsinline class="video-bg" loading="lazy">
+                <source src="video/h8_edit.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+        
+        <div class="hero-content fade-in">
+            <h1>TEAM H8</h1>
+            <p data-translate="hero_subtitle">New Era of Belarusian Counter-Strike 2</p>
+            <a href="#roster" class="btn" data-translate="hero_btn">Смотреть Ростер</a>
+        </div>
+    </section>
 
+
+    <!-- Roster Section -->
     <section id="roster" class="roster">
-    <h2>ОСНОВНОЙ СОСТАВ</h2>
-     <div class="player-grid">
-        <div class="player-card">
-            <div class="player-info">
-                <h3>M1nd3rr</h3>
-                <p>AWP</p>
+        <h2 data-translate="roster_title">ОСНОВНОЙ СОСТАВ</h2>
+        <div class="player-grid">
+            <div class="player-card fade-in-up" data-player="M1nd3rr">
+                <div class="player-info">
+                    <h3>M1nd3rr</h3>
+                    <p>AWP</p>
+                </div>
+                <img src="img/m1nd3rr.png" alt="M1nd3rr" class="player-photo" loading="lazy">
             </div>
-            <img src="img/sa1meq.jpg" alt="M1nd3rr" class="player-photo">
-        </div>
 
-        <div class="player-card">
-            <div class="player-info">
-                <h3>Aqweeit</h3>
-                <p>Rifle</p>
-            </div>
-            <img src="img/sa1meq.jpg" alt="Aqweeit" class="player-photo">
-        </div>
-        <div class="player-card">
-            <div class="player-info">
-                <h3>Sa1meq</h3>
-                <p>Capitan</p>
-            </div>
-            <img src="img/sa1meq.jpg" alt="Sa1meq" class="player-photo">
-        </div>
-        <div class="player-card">
-            <div class="player-info">
-                <h3>Mageboiiius</h3>
-                <p>Rifle</p>
-            </div>
-            <img src="img/sa1meq.jpg" alt="Mageboiiius" class="player-photo">
-        </div>
-
-        <div class="player-card">
-            <div class="player-info">
-                <h3>va1t1s4k4</h3>
-                <p>Rifle</p>
-            </div>
-            <img src="img/sa1meq.jpg" alt="va1t1s4k4" class="player-photo">
-        </div>
-    </div>
-</section>
-
-<section id="about" class="about">
-    <div class="container">
-        <h2>ИСТОРИЯ ОРГАНИЗАЦИИ</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p class="founded-date">Основано: 03.03.2023</p>
-                <p><strong>Team H8 (Hate)</strong> — амбициозная киберспортивная организация из Минска, Беларусь. Мы начали свой путь как небольшое сообщество единомышленников, объединенных страстью к соревновательному Counter-Strike.</p>
-                <p>Название "H8" символизирует спортивную злость и бескомпромиссность в игре. Мы не просто участвуем в турнирах — мы строим систему подготовки игроков, где дисциплина стоит выше таланта, а командная работа важнее личного счета.</p>
+            <div class="player-card fade-in-up" data-player="Aqweeit">
+                <div class="player-info">
+                    <h3>Aqweeit</h3>
+                    <p>Rifle</p>
+                </div>
+                <img src="img/sa1meq.jpg" alt="Aqweeit" class="player-photo" loading="lazy">
             </div>
             
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="t-date">03.03.2023</div>
-                    <div class="t-content">
-                        <h4>День основания</h4>
-                        <p>СЕО Сергей Явнюк закладывает фундамент будущей организации в Минске.</p>
-                    </div>
+            <div class="player-card fade-in-up" data-player="Sa1meq">
+                <div class="player-info">
+                    <h3>Sa1meq</h3>
+                    <p>Capitan</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="t-date">2024 - 2025</div>
-                    <div class="t-content">
-                        <h4>Становление</h4>
-                        <p>Формирование философии команды, отбор первых талантов и участие в региональных квалификациях.</p>
-                    </div>
+                <img src="img/sa1meq.jpg" alt="Sa1meq" class="player-photo" loading="lazy">
+            </div>
+            
+            <div class="player-card fade-in-up" data-player="Mageboiiius">
+                <div class="player-info">
+                    <h3>Mageboiiius</h3>
+                    <p>Rifle</p>
                 </div>
-                <div class="timeline-item active">
-                    <div class="t-date">07.01.2026</div>
-                    <div class="t-content">
-                        <h4>Новая Эра</h4>
-                        <p>Официальное утверждение текущего ростера и начало полномасштабного медийного присутствия.</p>
-                    </div>
+                <img src="img/sa1meq.jpg" alt="Mageboiiius" class="player-photo" loading="lazy">
+            </div>
+
+            <div class="player-card fade-in-up" data-player="va1t1s4k4">
+                <div class="player-info">
+                    <h3>va1t1s4k4</h3>
+                    <p>Rifle</p>
                 </div>
+                <img src="img/sa1meq.jpg" alt="va1t1s4k4" class="player-photo" loading="lazy">
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="management" class="management">
-    <h2>РУКОВОДСТВО ОРГАНИЗАЦИИ</h2>
-    <div class="ceo-container">
-        <div class="ceo-card">
-            <div class="ceo-image-container">
-                <img src="img/ceo_photo.jpg" alt="Явнюк Сергей Андреевич" class="ceo-photo">
-            </div>
-            <div class="ceo-info">
-                <h3>Явнюк Сергей Андреевич</h3>
-                <p class="position">CEO & Founder Team H8</p>
-                
-                <div class="ceo-bio">
-                    <p><strong>Дата основания:</strong> 03.03.2023</p>
-                    <p>Сергей Явнюк — основатель и идейный вдохновитель Team H8. С момента запуска проекта в марте 2023 года, он прошел путь от создания локального стака до формирования полноценной киберспортивной организации в Минске.</p>
-                    <p><em>"Наша цель — не просто участие, а доминирование на профессиональной сцене. Мы строим команду на принципах железной дисциплины и стратегического превосходства."</em></p>
-                </div>
-                
-                <div class="ceo-stats">
-                    <div class="stat-box">
-                        <span>1043</span>
-                        <p>Дней развития</p>
-                    </div>
-                    <div class="stat-box">
-                        <span>∞</span>
-                        <p>Амбиции</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="documents" class="docs">
-    <h2>OFFICIAL ORDERS (CEO)</h2>
-    <a href="docs/order_1.pdf" target="_blank" class="doc-link">
-        <div class="doc-item">
-            <div class="doc-meta">
-                <span class="doc-date">07.01.2026</span>
-                <span class="doc-number">№1</span>
-            </div>
-            <p>Об утверждении игрового состава H8 (Hate) по CS2</p>
-            <div class="doc-icon">PDF</div>
-        </div>
-    </a>
-
-    <a href="docs/order_2.pdf" target="_blank" class="doc-link">
-        <div class="doc-item">
-            <div class="doc-meta">
-                <span class="doc-date">08.01.2026</span>
-                <span class="doc-number">№2</span>
-            </div>
-            <p>Результаты квалификационной дуэли за роль AWP (Winner: M1nd3rr)</p>
-            <div class="doc-icon">PDF</div>
-        </div>
-    </a>
-</section>
-
-<section id="contacts" class="contacts">
+    <!-- Recent Matches Section -->
+    <section id="matches" class="matches">
         <div class="container">
-            <h2>СВЯЗАТЬСЯ С НАМИ</h2>
-            <div class="contacts-grid">
-                <div class="contact-box">
-                    <p class="accent">СОЦСЕТИ</p>
-                    <div class="social-links">
-                        <a href="https://t.me/yourchannel" target="_blank">Telegram</a>
-                        <a href="https://vk.com/yourpage" target="_blank">VKontakte</a>
-                        <a href="https://twitch.tv/yourchannel" target="_blank">Twitch</a>
+            <h2 data-translate="matches_title">ПОСЛЕДНИЕ МАТЧИ</h2>
+            <div class="matches-container">
+                <div class="match-card fade-in-up loss">
+                    <div class="match-header">
+                        <div class="match-info-left">
+                            <div class="match-date">15.02.2026</div>
+                            <div class="match-tournament">
+                                <img src="img/tournaments/Major.png" alt="Tournament" class="tournament-logo">
+                                <span>Major CS2 Budapesht</span>
+                            </div>
+                        </div>
+                        <span class="match-result">ПОРАЖЕНИЕ</span>
+                    </div>
+                    
+                    <div class="match-score">
+                        <div class="team">
+                            <img src="img/h8-logo.png" alt="H8" class="team-logo">
+                            <span class="team-name">Team H8</span>
+                        </div>
+                        <div class="score-section">
+                            <div class="score">1:2</div>
+                            <div class="match-map">Mirage (13:16) Overpass (13:6) Inferno (8:13)</div>
+                        </div>
+                        <div class="team opponent">
+                            <span class="team-name">Natus Vincere</span>
+                            <img src="img/opponent1.png" alt="Opponent" class="team-logo">
+                        </div>
                     </div>
                 </div>
-                <div class="contact-box">
-                    <p class="accent">ПОЧТА ДЛЯ ПРЕДЛОЖЕНИЙ</p>
-                    <a href="mailto:ceo@h8.gg" class="mail-link">h8.cs2official@gmail.com</a>
+
+                <div class="match-card fade-in-up win">
+                    <div class="match-header">
+                        <div class="match-info-left">
+                            <div class="match-date">12.02.2026</div>
+                            <div class="match-tournament">
+                                <img src="img/tournaments/Major.png" alt="Tournament" class="tournament-logo">
+                                <span>Major CS2 Budapesht</span>
+                            </div>
+                        </div>
+                        <span class="match-result">ПОБЕДА</span>
+                    </div>
+                    
+                    <div class="match-score">
+                        <div class="team">
+                            <img src="img/h8-logo.png" alt="H8" class="team-logo">
+                            <span class="team-name">Team H8</span>
+                        </div>
+                        <div class="score-section">
+                            <div class="score">2:1</div>
+                            <div class="match-map">Ancient (13:11) Mirage (4:13) Overpass (13:9)</div>
+                        </div>
+                        <div class="team opponent">
+                            <span class="team-name">Team Spirit</span>
+                            <img src="img/opponent2.png" alt="Opponent" class="team-logo">
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-box">
-                    <p class="accent">ОРГАНИЗАЦИЯ</p>
-                    <p>Минск, Беларусь<br>Основано: 03.03.2023</p>
+
+                <div class="match-card fade-in-up win">
+                    <div class="match-header">
+                        <div class="match-info-left">
+                            <div class="match-date">08.02.2026</div>
+                            <div class="match-tournament">
+                                <img src="img/tournaments/ESL.png" alt="Tournament" class="tournament-logo">
+                                <span>ESL One</span>
+                            </div>
+                        </div>
+                        <span class="match-result">ПОБЕДА</span>
+                    </div>
+                    
+                    <div class="match-score">
+                        <div class="team">
+                            <img src="img/h8-logo.png" alt="H8" class="team-logo">
+                            <span class="team-name">Team H8</span>
+                        </div>
+                        <div class="score-section">
+                            <div class="score">3:0</div>
+                            <div class="match-map">Inferno (13:7) Ancient (13:11) Nuke (13:3)</div>
+                        </div>
+                        <div class="team opponent">
+                            <span class="team-name">Vitality</span>
+                            <img src="img/opponent3.png" alt="Opponent" class="team-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Matches -->
+            <h3 data-translate="matches_upcoming">ПРЕДСТОЯЩИЕ МАТЧИ</h3>
+            <div class="upcoming-matches">
+                <div class="upcoming-card fade-in-up">
+                    <div class="upcoming-date">
+                        <span class="day">20</span>
+                        <span class="month">ФЕВ</span>
+                    </div>
+                    <div class="upcoming-info">
+                        <h4>CIS Championship 2026</h4>
+                        <p>vs. Strong Opponents</p>
+                        <span class="time">⏰ 18:00 MSK</span>
+                    </div>
+                </div>
+
+                <div class="upcoming-card fade-in-up">
+                    <div class="upcoming-date">
+                        <span class="day">25</span>
+                        <span class="month">ФЕВ</span>
+                    </div>
+                    <div class="upcoming-info">
+                        <h4>Belarusian Cup - Finals</h4>
+                        <p>vs. TBA</p>
+                        <span class="time">⏰ 20:00 MSK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 data-translate="achievements_title">ДОСТИЖЕНИЯ</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card fade-in-up gold">
+                    <div class="achievement-medal">🥇</div>
+                    <h3>1st Place</h3>
+                    <p>Minsk Regional Cup</p>
+                    <span class="achievement-year">2025</span>
+                </div>
+
+                <div class="achievement-card fade-in-up silver">
+                    <div class="achievement-medal">🥈</div>
+                    <h3>2nd Place</h3>
+                    <p>Belarus Championship</p>
+                    <span class="achievement-year">2025</span>
+                </div>
+
+                <div class="achievement-card fade-in-up bronze">
+                    <div class="achievement-medal">🥉</div>
+                    <h3>3rd Place</h3>
+                    <p>CIS Open Qualifier</p>
+                    <span class="achievement-year">2024</span>
+                </div>
+
+                <div class="achievement-card fade-in-up special">
+                    <div class="achievement-medal">⭐</div>
+                    <h3>Best Newcomer</h3>
+                    <p>Regional Awards 2025</p>
+                    <span class="achievement-year">2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 data-translate="gallery_title">ГАЛЕРЕЯ</h2>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="tournaments">Турниры</button>
+                <button class="filter-btn" data-filter="bootcamp">Буткемп</button>
+                <button class="filter-btn" data-filter="team">Команда</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in-up" data-category="tournaments">
+                    <img src="img/gallery/tournament1.jpg" alt="Tournament 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Minsk Cup 2025</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up" data-category="team">
+                    <img src="img/gallery/team1.jpg" alt="Team Photo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Team Photo 2026</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up" data-category="bootcamp">
+                    <img src="img/gallery/bootcamp1.jpg" alt="Bootcamp" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Bootcamp January</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up" data-category="tournaments">
+                    <img src="img/gallery/tournament2.jpg" alt="Tournament 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Regional Finals</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up" data-category="team">
+                    <img src="img/gallery/team2.jpg" alt="Team Celebration" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Victory Celebration</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-in-up" data-category="bootcamp">
+                    <img src="img/gallery/bootcamp2.jpg" alt="Training" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Training Session</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <h3 data-translate="gallery_videos">ВИДЕО</h3>
+            <div class="video-grid">
+                <div class="video-item fade-in-up">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="H8 Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <p>Best Moments 2025</p>
+                </div>
+
+                <div class="video-item fade-in-up">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Team Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <p>Team Interview</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-translate="about_title">ИСТОРИЯ ОРГАНИЗАЦИИ</h2>
+            <div class="about-grid">
+                <div class="about-text fade-in-up">
+                    <p class="founded-date">Основано: 03.03.2023</p>
+                    <p><strong>Team H8 (Hate)</strong> — амбициозная киберспортивная организация из Минска, Беларусь. Мы начали свой путь как небольшое сообщество единомышленников, объединенных страстью к соревновательному Counter-Strike.</p>
+                    <p>Название "H8" символизирует спортивную злость и бескомпромиссность в игре. Мы не просто участвуем в турнирах — мы строим систему подготовки игроков, где дисциплина стоит выше таланта, а командная работа важнее личного счета.</p>
+                </div>
+                
+                <div class="timeline fade-in-up">
+                    <div class="timeline-item">
+                        <div class="t-date">03.03.2023</div>
+                        <div class="t-content">
+                            <h4>День основания</h4>
+                            <p>СЕО Сергей Явнюк закладывает фундамент будущей организации в Минске.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="t-date">2024 - 2025</div>
+                        <div class="t-content">
+                            <h4>Становление</h4>
+                            <p>Формирование философии команды, отбор первых талантов и участие в региональных квалификациях.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item active">
+                        <div class="t-date">07.01.2026</div>
+                        <div class="t-content">
+                            <h4>Новая Эра</h4>
+                            <p>Официальное утверждение текущего ростера и начало полномасштабного медийного присутствия.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Section -->
+    <section id="management" class="management">
+        <h2 data-translate="management_title">РУКОВОДСТВО ОРГАНИЗАЦИИ</h2>
+        <div class="ceo-container fade-in-up">
+            <div class="ceo-card">
+                <div class="ceo-image-container">
+                    <img src="img/ceo_photo.jpg" alt="Явнюк Сергей Андреевич" class="ceo-photo" loading="lazy">
+                </div>
+                <div class="ceo-info">
+                    <h3>Явнюк Сергей Андреевич</h3>
+                    <p class="position">CEO & Founder Team H8</p>
+                    
+                    <div class="ceo-bio">
+                        <p><strong>Дата основания:</strong> 03.03.2023</p>
+                        <p>Сергей Явнюк — основатель и идейный вдохновитель Team H8. С момента запуска проекта в марте 2023 года, он прошел путь от создания локального стака до формирования полноценной киберспортивной организации в Минске.</p>
+                        <p><em>"Наша цель — не просто участие, а доминирование на профессиональной сцене. Мы строим команду на принципах железной дисциплины и стратегического превосходства."</em></p>
+                    </div>
+                    
+                    <div class="ceo-stats">
+                        <div class="stat-box">
+                            <span class="counter" data-target="1043">0</span>
+                            <p>Дней развития</p>
+                        </div>
+                        <div class="stat-box">
+                            <span>∞</span>
+                            <p>Амбиции</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="docs">
+        <h2 data-translate="docs_title">OFFICIAL ORDERS (CEO)</h2>
+        <a href="docs/order_1.pdf" target="_blank" class="doc-link fade-in-up">
+            <div class="doc-item">
+                <div class="doc-meta">
+                    <span class="doc-date">07.01.2026</span>
+                    <span class="doc-number">№1</span>
+                </div>
+                <p>Об утверждении игрового состава H8 (Hate) по CS2</p>
+                <div class="doc-icon">PDF</div>
+            </div>
+        </a>
+
+        <a href="docs/order_2.pdf" target="_blank" class="doc-link fade-in-up">
+            <div class="doc-item">
+                <div class="doc-meta">
+                    <span class="doc-date">08.01.2026</span>
+                    <span class="doc-number">№2</span>
+                </div>
+                <p>Результаты квалификационной дуэли за роль AWP (Winner: M1nd3rr)</p>
+                <div class="doc-icon">PDF</div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2 data-translate="contacts_title">СВЯЗАТЬСЯ С НАМИ</h2>
+            
+            <div class="contacts-wrapper">
+                <!-- Contact Info -->
+                <div class="contacts-grid">
+                    <div class="contact-box fade-in-up">
+                        <p class="accent">СОЦСЕТИ</p>
+                        <div class="social-links">
+                            <a href="https://t.me/Sa1meqq" target="_blank">
+                                <span class="social-icon">📱</span> Telegram
+                            </a>
+                            <a href="https://vk.com/sa1me" target="_blank">
+                                <span class="social-icon">👥</span> VKontakte
+                            </a>
+                            <a href="https://twitch.tv/sa1meq" target="_blank">
+                                <span class="social-icon">🎮</span> Twitch
+                            </a>
+                            <a href="https://youtube.com/@sa1me" target="_blank">
+                                <span class="social-icon">📺</span> YouTube
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-box fade-in-up">
+                        <p class="accent">ПОЧТА ДЛЯ ПРЕДЛОЖЕНИЙ</p>
+                        <a href="mailto:h8.cs2official@gmail.com" class="mail-link">h8.cs2official@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-box fade-in-up">
+                        <p class="accent">ОРГАНИЗАЦИЯ</p>
+                        <p>Минск, Беларусь<br>Основано: 03.03.2023</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper fade-in-up">
+                    <h3 data-translate="contacts_form_title">Отправить сообщение</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name" data-translate="form_name">Ваше имя</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email" data-translate="form_email">Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Выберите тему</option>
+                                <option value="partnership">Партнерство</option>
+                                <option value="sponsorship">Спонсорство</option>
+                                <option value="media">Медиа запрос</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <label for="subject" data-translate="form_subject">Тема</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message" data-translate="form_message">Сообщение</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit" data-translate="form_submit">Отправить</button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -214,109 +536,39 @@
         </div>
     </footer>
 
-<div id="playerModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div class="modal-body">
-            <img id="modalImg" src="" alt="">
-            <div class="modal-text">
-                <h2 id="modalName">Name</h2>
-                <p id="modalRole" class="accent"></p>
-                <div class="player-meta">
-                    <span id="modalAge"></span> | <span id="modalJoined"></span>
-                </div>
-                <hr>
-                <p id="modalBio"></p>
-                <div class="player-stats-mini">
-                    <div class="s-item">
-                        <span>K/D RATIO</span>
-                        <p id="modalKD"></p>
+    <!-- Player Modal -->
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="" loading="lazy">
+                <div class="modal-text">
+                    <h2 id="modalName">Name</h2>
+                    <p id="modalRole" class="accent"></p>
+                    <div class="player-meta">
+                        <span id="modalAge"></span> | <span id="modalJoined"></span>
                     </div>
-                    <div class="s-item">
-                        <span>ЛЮБИМАЯ КАРТА</span>
-                        <p id="modalMap" class="map-text"></p>
+                    <hr>
+                    <p id="modalBio"></p>
+                    <div class="player-stats-mini">
+                        <div class="s-item">
+                            <span>K/D RATIO</span>
+                            <p id="modalKD"></p>
+                        </div>
+                        <div class="s-item">
+                            <span>ЛЮБИМАЯ КАРТА</span>
+                            <p id="modalMap" class="map-text"></p>
+                        </div>
                     </div>
+                    <a id="faceitLink" href="#" target="_blank" class="btn-faceit">PROFILE ON FACEIT</a>
                 </div>
-                <a id="faceitLink" href="#" target="_blank" class="btn-faceit" style="display: inline-block; margin-top: 20px; padding: 10px 15px; background: #ff5500; color: #fff; text-decoration: none; border-radius: 4px; font-family: 'Orbitron'; font-size: 12px;">PROFILE ON FACEIT</a>
             </div>
         </div>
     </div>
-</div>
-    <script>
-// Данные игроков (можно менять под себя)
-const playersData = {
-    "Sa1meq": { 
-        role: "Capitan", 
-        joined: "03.03.2023", 
-        age: "20 лет",
-        bio: "Лидер состава и координатор игрового процесса. Выстраивает стратегию и следит за дисциплиной во время матчей.", 
-        kd: "1.05", 
-        map: "Inferno",
-        photo: "img/sa1meq.jpg" 
-    },
-    "M1nd3rr": { 
-        role: "AWP", 
-        joined: "03.03.2023", 
-        age: "21 год",
-        bio: "Основной снайпер команды. Обеспечивает ключевые открывающие фрагменты и контроль дальних дистанций.", 
-        kd: "1.35", 
-        map: "Mirage",
-        photo: "img/m1nd3rr.jpg" 
-    },
-    "Aqweeit": { 
-        role: "Rifle", 
-        joined: "03.03.2023", 
-        age: "19 лет",
-        bio: "Энергичный рифлер, специализирующийся на агрессивных прорывах и создании пространства для команды.", 
-        kd: "1.15", 
-        map: "Ancient",
-        photo: "img/aqweeit.jpg" 
-    },
-    "Mageboiiius": { 
-        role: "Rifle", 
-        joined: "01.04.2024", 
-        age: "21 год",
-        bio: "Универсальный игрок поддержки. Мастер использования гранат и надежного удержания позиций.", 
-        kd: "1.10", 
-        map: "Overpass",
-        photo: "img/mageboiiius.jpg" 
-    },
-    "va1t1s4k4": { 
-        role: "Rifle", 
-        joined: "07.01.2026", 
-        age: "21 год",
-        bio: "Агрессивный стрелок с высоким уровнем индивидуального мастерства. Самый свежий участник основного ростера.", 
-        kd: "1.12", 
-        map: "Anubis",
-        photo: "img/va1t1s4k4.jpg" 
-    }
-};
 
-const modal = document.getElementById("playerModal");
-const closeBtn = document.querySelector(".close-modal");
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top">↑</button>
 
-// Открытие модалки при клике
-document.querySelectorAll('.player-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const name = card.querySelector('h3').innerText;
-        const data = playersData[name];
-
-        document.getElementById("modalName").innerText = name;
-        document.getElementById("modalRole").innerText = data.role;
-        document.getElementById("modalBio").innerText = data.bio;
-        document.getElementById("modalKD").innerText = data.kd;
-        document.getElementById("modalImg").src = data.photo;
-        document.getElementById("modalAge").innerText = "Возраст: " + data.age;
-        document.getElementById("modalJoined").innerText = "В команде с: " + data.joined;
-        document.getElementById("modalMap").innerText = data.map;
-
-        modal.style.display = "block";
-    });
-});
-
-// Закрытие
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; };
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
